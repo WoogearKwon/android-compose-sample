@@ -85,7 +85,7 @@ fun Greeting(name: String) {
 
 @Composable
 private fun CardContent(name: String) {
-    var expanded by remember { mutableStateOf(false) }
+    var expanded by rememberSaveable { mutableStateOf(false) }
     val textRes = if (expanded) R.string.show_less else R.string.show_more
     val imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore
 
