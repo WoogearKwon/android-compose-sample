@@ -26,7 +26,7 @@ fun HomeRoute(
         onErrorDismiss = { homeViewModel.errorShown(it) },
         onInteractWithFeed = { homeViewModel.interactedWithFeed() },
         onInteractWithArticleDetails = { homeViewModel.interactedWithArticleDetails(it) },
-        onSearchInputChanged = { homeViewModel.onSearchInputChanged() },
+        onSearchInputChanged = { homeViewModel.onSearchInputChanged(it) },
         openDrawer = openDrawer,
         scaffoldState = scaffoldState
     )
