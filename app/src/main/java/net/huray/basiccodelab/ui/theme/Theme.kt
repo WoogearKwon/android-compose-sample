@@ -52,20 +52,14 @@ private val DarkThemeColors = darkColors(
 )
 
 @Composable
-fun BasicCodelabTheme(
+fun NewsTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
-
     MaterialTheme(
-        colors = colors,
-        typography = Typography,
-        shapes = Shapes,
+        colors = if (darkTheme) DarkThemeColors else LightThemeColors,
+        typography = NewsTypography,
+        shapes = NewsShapes,
         content = content
     )
 }
